@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mininmap"
+version = "1.0.0"
+description = "A lightweight Python network scanner: host discovery, TCP connect scanning, and basic service detection."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Your Name" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Networking",
+    "Intended Audience :: Information Technology",
+]
+# No third-party dependencies - stdlib only (socket, argparse, threading, etc.)
+dependencies = []
+
+[project.scripts]
+mininmap = "mininmap.scanner:main"
+
+[tool.setuptools]
+packages = ["mininmap"]
